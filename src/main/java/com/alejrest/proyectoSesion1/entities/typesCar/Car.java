@@ -94,5 +94,5 @@ abstract public class Car {
         return sb.toString();
     };
 
-    abstract Car getCarInstance();
+    public abstract Car getCarInstance();
 }
