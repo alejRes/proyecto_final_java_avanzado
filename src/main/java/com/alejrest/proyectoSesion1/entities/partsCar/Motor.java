@@ -46,28 +46,11 @@ public class Motor {
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return new StringBuilder()
                 .append("\n\tType motor : " + this.getTypeMotor().getMotorDescription())
                 .append("\n\tHorsePower : " + this.getHorsePower())
                 .append("\n\tCubic capacity: " + this.getCubicCapacity())
                 .toString();
-    }
-}
-
-enum TypeMotor {
-
-    DIESEL("Diesel motor"),
-    GASOLINE("Gasoline motor"),
-    HIBRID("Hybrid motor"),
-    ELECTRIC("Electric motor");
-    private String motorDescription;
-
-    private TypeMotor(String motorDescription){
-        this.motorDescription = motorDescription;
-    }
-
-    public String getMotorDescription(){
-        return motorDescription;
     }
 }

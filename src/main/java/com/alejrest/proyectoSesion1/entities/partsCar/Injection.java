@@ -27,23 +27,11 @@ public class Injection {
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return new StringBuilder("\nInjection: ")
                 .append("\n\tType injection : " + this.getTypeInjection().getInjectionDescription())
                 .append("\n\tNumber cylinders : " + this.getNumberCylinders())
                 .toString();
     }
-}
-enum TypeInjection {
-    DIRECT("Direct injection"),
-    INDIRECT("Indirect injection");
 
-    private String injectionDescription;
-    private TypeInjection(String injectionDescription){
-        this.injectionDescription = injectionDescription;
-    }
-
-    public String getInjectionDescription(){
-        return injectionDescription;
-    }
 }
