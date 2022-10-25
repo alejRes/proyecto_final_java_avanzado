@@ -4,7 +4,7 @@ import com.alejrest.proyectoSesion1.entities.partsCar.AirConditioning;
 import com.alejrest.proyectoSesion1.entities.partsCar.Batery;
 import com.alejrest.proyectoSesion1.entities.partsCar.Motor;
 
-abstract public class Car {
+  public class Car {
 
     private String carRegistration;
     private String brand;
@@ -15,7 +15,22 @@ abstract public class Car {
     private Batery batery;
     private AirConditioning airConditioning;
 
-    public String getCarRegistration() {
+     Car() {
+
+     }
+     Car(String carRegistration, String brand, String model, String color, int numberOfDoors, Motor motor, Batery batery, AirConditioning airConditioning) {
+         this.carRegistration = carRegistration;
+         this.brand = brand;
+         this.model = model;
+         Color = color;
+         this.numberOfDoors = numberOfDoors;
+         this.motor = motor;
+         this.batery = batery;
+         this.airConditioning = airConditioning;
+     }
+
+
+     public String getCarRegistration() {
         return carRegistration;
     }
 
@@ -94,5 +109,4 @@ abstract public class Car {
         return sb.toString();
     };
 
-    public abstract Car getCarInstance();
 }

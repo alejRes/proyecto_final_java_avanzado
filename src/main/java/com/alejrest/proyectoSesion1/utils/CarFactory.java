@@ -54,6 +54,6 @@ public class CarFactory {
     }
 
     public Car getCarInstance(){
-        return car.getCarInstance();
+        return car;
     }
 }

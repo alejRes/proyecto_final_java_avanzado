@@ -1,6 +1,10 @@
 package com.alejrest.proyectoSesion1.entities.typesCar;
 
+import com.alejrest.proyectoSesion1.entities.partsCar.AirConditioning;
+import com.alejrest.proyectoSesion1.entities.partsCar.Batery;
 import com.alejrest.proyectoSesion1.entities.partsCar.Injection;
+import com.alejrest.proyectoSesion1.entities.partsCar.Motor;
+
 
 public class CombustionCar extends Car {
 
@@ -13,6 +17,14 @@ public class CombustionCar extends Car {
     public void setInjection(Injection injection) {
         this.injection = injection;
     }
+    public CombustionCar(){
+        super();
+    }
+
+    public CombustionCar(String carRegistration, String brand, String model, String color, int numberOfDoors, Motor motor, Batery batery, AirConditioning airConditioning, Injection injection) {
+        super(carRegistration, brand, model, color, numberOfDoors, motor, batery, airConditioning);
+        this.injection = injection;
+    }
 
     @Override
     public String toString(){
@@ -23,8 +35,4 @@ public class CombustionCar extends Car {
         return sb.toString();
     }
 
-    @Override
-    public Car getCarInstance() {
-        return this;
-    }
 }

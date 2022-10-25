@@ -4,6 +4,7 @@ public class HydrogenTank {
 
     private int capacity;
 
+    public HydrogenTank(){}
     public HydrogenTank(int capacity){
         this.capacity = capacity;
     }

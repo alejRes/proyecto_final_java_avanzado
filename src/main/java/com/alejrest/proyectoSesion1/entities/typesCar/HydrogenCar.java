@@ -1,6 +1,9 @@
 package com.alejrest.proyectoSesion1.entities.typesCar;
 
+import com.alejrest.proyectoSesion1.entities.partsCar.AirConditioning;
+import com.alejrest.proyectoSesion1.entities.partsCar.Batery;
 import com.alejrest.proyectoSesion1.entities.partsCar.HydrogenTank;
+import com.alejrest.proyectoSesion1.entities.partsCar.Motor;
 
 public class HydrogenCar extends Car{
     private HydrogenTank hydrogenTank;
@@ -12,6 +15,15 @@ public class HydrogenCar extends Car{
     public void setHydrogenTank(HydrogenTank hydrogenTank) {
         this.hydrogenTank = hydrogenTank;
     }
+    public HydrogenCar() {
+        super();
+    }
+
+    public HydrogenCar(String carRegistration, String brand, String model, String color, int numberOfDoors, Motor motor, Batery batery, AirConditioning airConditioning, HydrogenTank hydrogenTank) {
+        super(carRegistration, brand, model, color, numberOfDoors, motor, batery, airConditioning);
+        this.hydrogenTank = hydrogenTank;
+    }
+
 
     @Override
     public String toString(){
@@ -22,9 +34,5 @@ public class HydrogenCar extends Car{
         return sb.toString();
     }
 
-    @Override
-    public Car getCarInstance() {
-        return this;
-    }
 }
 
