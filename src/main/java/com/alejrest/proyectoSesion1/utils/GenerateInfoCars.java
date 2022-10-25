@@ -37,8 +37,18 @@ public class GenerateInfoCars {
     public String generateCarRegistration() {
         int numbersCar = 9999;
         String stringBuilder;
+        int number = generateRandomNumber(numbersCar);
+        String zeros ="";
+        if (number < 10){
+            zeros = "000";
+        }else if( number >= 10 && number < 100){
+            zeros = "00";
+        } else if (number >=100 && number <1000) {
+            zeros = "0";
+        }
 
-        StringBuilder sb = new StringBuilder(generateRandomNumber(numbersCar))
+        StringBuilder sb = new StringBuilder(zeros)
+                .append(String.valueOf(number))
                 .append(generateLettersCarRegistration());
 
         return sb.toString();
