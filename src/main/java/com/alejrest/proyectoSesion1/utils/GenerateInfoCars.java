@@ -75,7 +75,7 @@ public class GenerateInfoCars {
                 break;
             } else if (motor.getTypeMotor() == TypeMotor.ELECTRIC && typeCar.equalsIgnoreCase("electric")) {
                 break;
-            } else if (motor.getTypeMotor() == TypeMotor.HIBRID && typeCar.equalsIgnoreCase("hybrid")) {
+            } else if (motor.getTypeMotor() == TypeMotor.HYBRID && typeCar.equalsIgnoreCase("hybrid")) {
                 break;
             }
         }
@@ -161,8 +161,9 @@ public class GenerateInfoCars {
         motors.add(new Motor(TypeMotor.GASOLINE, 115, 1.2));
         motors.add(new Motor(TypeMotor.GASOLINE, 130, 1.4));
         motors.add(new Motor(TypeMotor.DIESEL, 150, 2.0));
-        motors.add(new Motor(TypeMotor.HIBRID, 122, 1.8));
-        motors.add(new Motor(TypeMotor.HIBRID, 135, 1.6));
+
+        motors.add(new Motor(TypeMotor.HYBRID, 122, 1.8));
+        motors.add(new Motor(TypeMotor.HYBRID, 135, 1.6));
         motors.add(new Motor(TypeMotor.ELECTRIC, 136, 0));
         motors.add(new Motor(TypeMotor.ELECTRIC, 204, 0));
 

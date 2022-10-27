@@ -11,5 +11,6 @@ public class AirConditioning {
     public void setTurnOn(boolean turnOn) {
         isTurnOn = turnOn;
     }
+
 }
 

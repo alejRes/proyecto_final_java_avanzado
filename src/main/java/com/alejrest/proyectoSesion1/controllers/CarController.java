@@ -1,6 +1,8 @@
 package com.alejrest.proyectoSesion1.controllers;
 
 import com.alejrest.proyectoSesion1.entities.typesCar.Car;
+import com.alejrest.proyectoSesion1.entities.typesCar.CombustionCar;
+import com.alejrest.proyectoSesion1.entities.typesCar.ElectricCar;
 import com.alejrest.proyectoSesion1.entities.typesCar.HydrogenCar;
 import com.alejrest.proyectoSesion1.services.CarService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,11 +27,34 @@ public class CarController {
     }
 
     @POST
-    @Path("/randomCar/save")
+    @Path("/randomCar/electric")
     @Produces("application/json")
     @Consumes("application/json")
-    public Response saveOneRandomCar(Car car){
-        System.out.println(car);
+    public Response saveOneRandomElectricCar(ElectricCar car){
+
+        carService.saveRandomCar(car);
+
+        return Response.ok().build();
+    }
+
+    @POST
+    @Path("/randomCar/combustion")
+    @Produces("application/json")
+    @Consumes("application/json")
+    public Response saveOneRandomCombustionCar(CombustionCar car){
+
+        carService.saveRandomCar(car);
+
+        return Response.ok().build();
+    }
+
+    @POST
+    @Path("/randomCar/hybrid")
+    @Produces("application/json")
+    @Consumes("application/json")
+    public Response saveOneRandomHybridCar(HydrogenCar car){
+
+
         carService.saveRandomCar(car);
 
         return Response.ok().build();
@@ -41,5 +66,13 @@ public class CarController {
     public List<Car> listAllCars(){
         return carService.listAllCars();
     }
+
+    @GET
+    @Path("/{carRegistration}")
+    @Produces("application/json")
+    public Car carByCarRegistration(@PathParam("carRegistration") String carRegistration){
+        return carService.getCarByCarRegistration(carRegistration);
+    }
+
 
 }
