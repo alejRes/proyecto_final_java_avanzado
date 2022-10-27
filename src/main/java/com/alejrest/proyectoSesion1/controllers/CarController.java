@@ -54,6 +54,7 @@ public class CarController {
     @Consumes("application/json")
     public Response saveOneRandomHybridCar(HydrogenCar car){
 
+
         carService.saveRandomCar(car);
 
         return Response.ok().build();
@@ -72,5 +73,6 @@ public class CarController {
     public Car carByCarRegistration(@PathParam("carRegistration") String carRegistration){
         return carService.getCarByCarRegistration(carRegistration);
     }
+
 
 }

@@ -11,9 +11,11 @@ public class ElectricCar extends Car{
     public ElectricCar(){
         super();
     }
+
     public ElectricCar(String carRegistration, String brand, String model, String color, int numberOfDoors, Motor motor, Batery batery, AirConditioning airConditioning, ElectricBatery electricBatery) {
         super(carRegistration, brand, model, color, numberOfDoors, motor, batery, airConditioning);
         this.electricBatery = electricBatery;
+
     }
 
     public ElectricBatery getElectricBatery() {
