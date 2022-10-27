@@ -4,7 +4,7 @@ public enum TypeMotor {
 
     DIESEL("Diesel motor"),
     GASOLINE("Gasoline motor"),
-    HIBRID("Hybrid motor"),
+    HYBRID("Hybrid motor"),
     ELECTRIC("Electric motor");
     private String motorDescription;
 

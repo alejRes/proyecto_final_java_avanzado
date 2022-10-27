@@ -30,4 +30,14 @@ public class CarRepositoryMemImpl implements CarRepository{
         return cars;
     }
 
+    @Override
+    public Car carByCarRegistration(String carRegistration) {
+        for(Car car : cars){
+            if(car.getCarRegistration().equalsIgnoreCase(carRegistration)){
+                return car;
+            }
+        }
+
+        return null;
+    }
 }
