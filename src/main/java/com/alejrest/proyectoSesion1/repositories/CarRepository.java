@@ -9,4 +9,5 @@ public interface CarRepository {
     Car getRandomCar(String typeCar);
     void saveCar(Car car);
     List<Car> listAllCars();
+    Car carByCarRegistration(String carRegistration);
 }
